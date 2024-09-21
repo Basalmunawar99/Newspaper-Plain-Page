@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karachi Times</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .head {
+            text-align: center;
+            font-size: 2.5em;
+            background-color: black;
+            color: whitesmoke;
+            padding: 15px 0;
+            margin: 0;
+        }
+
+        .newspaper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .article {
+            border: 2px solid black;
+            background-color: white;
+            padding: 20px;
+            max-width: 800px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            text-decoration: underline;
+            color: #444;
+        }
+
+        p {
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .feedback-form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-form textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            resize: vertical;
+        }
+
+        .feedback-form .submit-button {
+            background-color: green;
+            color: whitesmoke;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 2px;
+            font-size: 16px;
+        }
+
+        .feedback-form .submit-button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">KARACHI TIMES</div>
+    
+    <div class="newspaper">
+        <div class="article">
+            <h2>Reappointment of AIG Karachi</h2>
+            <p>Javed Alam Odho has been reappointed as Additional Inspector General (AIG) of Karachi police after a notification was issued by the Chief Secretary Sindh on Thursday, Express News reported.</p>
+        </div>
+        
+        <div class="article">
+            <h2>Quetta Gladiators vs. Karachi Kings</h2>
+            <p>KARACHI, Pakistan (AP) — Sherfane Rutherford hit an unbeaten half-century and earned a five-wicket win for Quetta Gladiators over virus-stricken Karachi Kings in the Pakistan Super League on Thursday. Rutherford smashed 58 not out off 31 balls with six towering sixes and a match-winning boundary off the final ball as Quetta recovered from a middle-order collapse to reach 169-5 for their fourth win in five games. Karachi couldn’t cash in on James Vince (37) and Tim Seifert’s (21) impactful batting in the power play before they got tangled against Quetta spinners and were restricted to 165-8. It was Karachi’s third loss in five games.</p>
+        </div>
+
+        <div class="article">
+            <h2>Latest Updates</h2>
+            <p>
+                Sure! Here’s a plain text news update you can copy and paste:
+                
+                Global Climate Summit 2024
+                
+                World leaders gathered in New York this week for the annual Global Climate Summit, aiming to address urgent climate change challenges. Discussions focused on reducing carbon emissions and transitioning to renewable energy sources. Activists have urged governments to take bolder actions, highlighting the recent extreme weather events as a clear signal of the climate crisis. Countries have pledged to enhance their commitments under the Paris Agreement, with a strong emphasis on collaboration and innovation to achieve sustainability goals.</p>
+        </div>
+    </div>
+
+    <h1>Leave Your Feedback</h1>
+    <div class="feedback-form" id="feedbackForm">
+        <textarea id="feedbackTextarea" placeholder="LEAVE A COMMENT" required></textarea>
+        <button class="submit-button" onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            const feedback = document.getElementById('feedbackTextarea').value;
+            if (feedback) {
+                alert('Thank you for your feedback!');
+                document.getElementById('feedbackTextarea').value = ''; // Clear textarea
+            } else {
+                alert('Please enter your feedback before submitting.');
+            }
+        }
+    </script>
+</body>
+</html>
